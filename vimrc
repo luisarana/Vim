@@ -6,6 +6,10 @@ set history=500
 
 au FileType php set omnifunc=phpcomplete#CompletePHP
 
+"------  Removes autocomplete preview window
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
 "------  Visual Options  ------
 set guioptions=egmt         "remove toolbar, scrollbars
 syntax on                   "Enables syntax highlighting
@@ -14,6 +18,7 @@ set nowrap                  "Disable word wrap
 set vb                      "Visual bell instead of beeps
 set ruler                   "Displays cursor position on bottom right of screen
 set statusline=%<%f\ %h%m%r%=%{fugitive#statusline()}\ \ %-14.(%l,%c%V%)\ %P
+set cursorline
 
 "------  Behavior  ------
 set tabstop=4               "tab = 4 spaces
@@ -55,7 +60,7 @@ noremap <silent> <Leader>n :NERDTreeToggle<CR>
 "------  Tagbar Options  ------
 " http://adamyoung.net/Exuberant-Ctags-OS-X
 " http://www.vim.org/scripts/script.php?script_id=273
-let g:tagbar_ctags_bin='/usr/local/bin/ctags'
+let g:tagbar_ctags_bin='/usr/bin/ctags'
 let g:tagbar_width=26
 noremap <silent> <Leader>y :TagbarToggle<CR>
 
