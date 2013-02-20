@@ -10,6 +10,15 @@ au FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
+"------  ctrlp.vim
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_map = '<Leader>t'
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_dotfiles = 0
+let g:ctrlp_switch_buffer = 0
+
 "------  Visual Options  ------
 set guioptions=egmt         "remove toolbar, scrollbars
 syntax on                   "Enables syntax highlighting
@@ -56,13 +65,6 @@ vmap S :s//g<LEFT><LEFT>
 let NERDTreeIgnore=['CVS']
 let NERDTreeChDirMode=2     "setting root dir in NT also sets VIM's cd
 noremap <silent> <Leader>n :NERDTreeToggle<CR>
-
-"------  Tagbar Options  ------
-" http://adamyoung.net/Exuberant-Ctags-OS-X
-" http://www.vim.org/scripts/script.php?script_id=273
-let g:tagbar_ctags_bin='/usr/bin/ctags'
-let g:tagbar_width=26
-noremap <silent> <Leader>y :TagbarToggle<CR>
 
 "------  Buffers  ------
 " Ctrl Left & Right move between buffers
