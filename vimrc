@@ -12,12 +12,16 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 "------  ctrlp.vim
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+nmap ; :CtrlPBuffer<CR>
 let g:ctrlp_map = '<Leader>t'
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_dotfiles = 0
 let g:ctrlp_switch_buffer = 0
+
+"------  closetag.vim
+au Filetype phtml,html,xml,xsl source ~/.vim/scripts/closetag.vim 
 
 "------  Visual Options  ------
 set guioptions=egmt         "remove toolbar, scrollbars
