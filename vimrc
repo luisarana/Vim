@@ -21,7 +21,7 @@ let g:ctrlp_dotfiles = 0
 let g:ctrlp_switch_buffer = 0
 
 "------  closetag.vim
-au Filetype phtml,html,xml,xsl source ~/.vim/scripts/closetag.vim 
+au Filetype phtml,html,xml,xsl source ~/.vim/bundle/closetag.vim/closetag.vim 
 
 "------  Visual Options  ------
 set guioptions=egmt         "remove toolbar, scrollbars
