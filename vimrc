@@ -23,6 +23,9 @@ let g:ctrlp_switch_buffer = 0
 "------  closetag.vim
 au Filetype phtml,html,xml,xsl source ~/.vim/bundle/closetag.vim/closetag.vim 
 
+"------  Tabularize
+map <Leader>= :Tab /=<CR>
+
 "------  Visual Options  ------
 set guioptions=egmt         "remove toolbar, scrollbars
 syntax on                   "Enables syntax highlighting
