@@ -23,7 +23,7 @@ let g:ctrlp_switch_buffer = 0
 "------  closetag.vim
 au Filetype phtml,html,xml,xsl source ~/.vim/bundle/closetag.vim/closetag.vim 
 
-"------  Tabularize
+"------  Tabular.vim
 map <Leader>= :Tab /=<CR>
 
 "------  Visual Options  ------
@@ -134,7 +134,7 @@ map <Leader>ss :SaveSession
 " When pressing <leader>cd switch to the directory of the open buffer
 "map <Leader>cd :cd %:p:h<CR>
 " ,ct = Builds ctags
-map <Leader>ct :! /usr/local/bin/ctags -R *<CR>
+map <Leader>ct :! ctags -R *<CR>
 
 " ,v = Paste
 map <Leader>v "+gP
