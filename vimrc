@@ -25,6 +25,7 @@ au Filetype phtml,html,xml,xsl source ~/.vim/bundle/closetag.vim/closetag.vim
 
 "------  Tabular.vim
 map <Leader>= :Tab /=<CR>
+map <Leader>> :Tab /=><CR>
 
 "------  Visual Options  ------
 set guioptions=egmt         "remove toolbar, scrollbars
