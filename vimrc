@@ -63,11 +63,6 @@ nnoremap <leader>/ :nohlsearch<CR>
 noremap <leader>a :Ack 
 let g:ackprg="ack -H --nocolor --nogroup --column --type-add php=.tpl"
 
-"------  Replacing ------
-"type S, then type what you're looking for, a /, and what to replace it with
-nmap S :%s//g<LEFT><LEFT>
-vmap S :s//g<LEFT><LEFT>
-
 "------  NERDTree Options  ------
 let NERDTreeIgnore=['CVS']
 let NERDTreeChDirMode=2     "setting root dir in NT also sets VIM's cd
