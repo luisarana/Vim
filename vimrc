@@ -1,5 +1,5 @@
 call pathogen#infect()      "Executes the pathogen plugin, which loads other plugins
-let mapleader=","           "Changes Leader key into a comma instead of a backslash
+"let mapleader=","           "Changes Leader key into a comma instead of a backslash
 set nocompatible            "Prefents VIM from being nerfed into acting like VI
 set viminfo='1000,f1,:1000,/1000
 set history=500
@@ -12,7 +12,7 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 "------  ctrlp.vim
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-nmap ; :CtrlPBuffer<CR>
+nmap <Leader>b :CtrlPBuffer<CR>
 let g:ctrlp_map = '<Leader>t'
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
@@ -58,7 +58,7 @@ set ignorecase              "Case Insensitive Searching
 set smartcase               "Lowercase = case insensitive, any uppercase = case sensitive
 set hlsearch                "Highlight all search results
 "Following line clears the search highlights when pressing Lb
-nnoremap <leader>b :nohlsearch<CR>
+nnoremap <leader>/ :nohlsearch<CR>
 " http://www.vim.org/scripts/script.php?script_id=2572
 noremap <leader>a :Ack 
 let g:ackprg="ack -H --nocolor --nogroup --column --type-add php=.tpl"
