@@ -111,11 +111,12 @@ nnoremap <Leader>ws <C-w>s
 nnoremap <Leader>ww <C-w><C-w>
 
 " Opens an edit command with the path of the currently edited file filled in Normal mode: <Leader>ee
-map <Leader>ee :e <C-R>=expand("%:p:h") . "/" <CR>
+"map <Leader>ee :e <C-R>=expand("%:p:h") . "/" <CR>
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 " Opens a tab edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>t
-map <Leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
+map <Leader>e :tabe <C-R>=expand("%:p:h") . "/" <CR><CR>
 
 " Edit and Reload .vimrc files
 nmap <silent> <Leader>ev :e $MYVIMRC<CR>
