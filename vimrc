@@ -67,7 +67,8 @@ let g:ackprg="ack -H --nocolor --nogroup --column --type-add php=.tpl"
 "------  NERDTree Options  ------
 let NERDTreeIgnore=['CVS']
 let NERDTreeChDirMode=2     "setting root dir in NT also sets VIM's cd
-noremap <silent> <Leader>n :NERDTreeToggle<CR>
+"noremap <silent> <Leader>n :NERDTreeToggle<CR>
+noremap <silent> <Leader>n :e .<CR>
 
 "------  Buffers  ------
 " Ctrl Left & Right move between buffers
