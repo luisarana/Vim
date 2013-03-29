@@ -57,9 +57,10 @@ au BufWritePost *.coffee silent CoffeeMake!
 set incsearch               "Search while typing
 set ignorecase              "Case Insensitive Searching
 set smartcase               "Lowercase = case insensitive, any uppercase = case sensitive
-set hlsearch                "Highlight all search results
+set nohlsearch
+"set hlsearch                "Highlight all search results
 "Following line clears the search highlights when pressing Lb
-nnoremap <leader>/ :nohlsearch<CR>
+"nnoremap <leader>/ :nohlsearch<CR>
 " http://www.vim.org/scripts/script.php?script_id=2572
 noremap <leader>a :Ack 
 let g:ackprg="ack -H --nocolor --nogroup --column --type-add php=.tpl"
